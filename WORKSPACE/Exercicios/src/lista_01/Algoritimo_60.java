@@ -6,7 +6,7 @@ public class Algoritimo_60 {
 
 	public static void main(String[] args) {
 		
-		int termo_1,termo_2,razao;
+		int termo_1,termo_2,razao,termo_10;
 		
 		Scanner ler = new Scanner(System.in);
 		
@@ -19,7 +19,9 @@ public class Algoritimo_60 {
 		
 		razao = termo_1 - termo_2 ;
 		
-		System.out.println(razao);
+		termo_10 = termo_1 + (11-1)*razao;      		 
+		
+		System.out.println("O decimo termo é"+termo_10);
 		
 		
 		
