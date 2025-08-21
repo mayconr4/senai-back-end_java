@@ -46,31 +46,32 @@ public class Algoritimo_124 {
 
 	}
 	
-	public static  int Retangulo(int a, int b, int c) {       		
-		
-		if(!(a == b) && !(c == b) && !(c == a) ) {
-			
-			System.out.println("è um Triangulo Escaleno: ");     		
-		}
-		
-		return a;
-	} 
-	
-	
-	public static int Acutangulo(int a, int b, int c) {
-		if (a == b &&  b == a && !(c == b) && !(c == a)   ){
+	public static int Retangulo(int a, int b, int c) {
+		if ( a == b+c && b == c+a && c == a+b   ){
 			
 			System.out.println("è um Triangulo Isóceles: ");
 		}  	 		
 		return a;
 	}
 	
+	public static  int Acutangulo(int a, int b, int c) {       		
+		
+		if(a < b + c && b < a+c && c <a+b ) {
+			
+			System.out.println("è um Triangulo acutângulo ");     		
+		}
+		
+		return a;
+	} 
+	
+	
+	
 	
 	public static int Obtusangulo(int a, int b, int c) {       		
 		
-		if(a == b && c == b && c == a  ) {
+		if(a > b+c && b > c+a && c > a+b) {
 			
-			System.out.println("è um Triangulo Equilátero: ");     			
+			System.out.println("è um Triangulo Obtusangulo ");     			
 		} 		
 		return a;
 	}
