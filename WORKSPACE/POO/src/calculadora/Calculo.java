@@ -2,7 +2,7 @@ package calculadora;
 
 
 
-public class Calculo {
+public class Calculo extends CalculoCientifico{
 	
 	//o que tenho (Atributos)
 	private double valor_01;
