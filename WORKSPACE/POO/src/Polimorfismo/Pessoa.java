@@ -9,9 +9,9 @@ public class Pessoa {
 		
 		
 		//inicializando os parametros do construtor sem precisar de parametros
-		/*this.nome= "Docinho";
+		this.nome= "Docinho";
 		this.endereco = "Endereço";
-		this.email = "Docinho@gmail.com";*/
+		this.email = "Docinho@gmail.com";
 	}
 	
 	public Pessoa(String nome) {
