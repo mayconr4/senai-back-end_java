@@ -23,10 +23,13 @@ public class GPS {
 	}
 	
 	public GPS() {
+		this.idioma = "default";
+		this.rota = "default";
 		
 	}  
 	
 	public GPS(String idioma,String rota) {
+		super();
 		this.idioma = idioma;
 		this.rota = rota; 		
 	} 	
