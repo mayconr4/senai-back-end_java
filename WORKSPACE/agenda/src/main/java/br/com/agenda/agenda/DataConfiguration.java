@@ -14,23 +14,21 @@ public class DataConfiguration {
 	
 	@Bean
 	public DataSource dataSource() {
-	DriverManagerDataSource dataSource = new DriverManagerDataSource();
-	dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-	dataSource.setUrl("jdbc:mysql://localhost:3306/agenda");
-	dataSource.setUsername("root");
-	dataSource.setPassword("senai@126");
-	return dataSource();
-		
-		
-	
+		DriverManagerDataSource dataSource  = new DriverManagerDataSource();
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/agenda");
+		dataSource.setUsername("root");
+		dataSource.setPassword("P@thaigon#01@a");
+		return dataSource;
 	}
+	
 	
 	@Bean
 	public JpaVendorAdapter jpaVendorAdapter() {
-		HibernateJpaVendorAdapter adapter= new HibernateJpaVendorAdapter();
+		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 		adapter.setDatabase(Database.MYSQL);
 		adapter.setShowSql(true);
-		adapter.setGenerateDdl(true); // se estiver criado o banco , colocar false
+		adapter.setGenerateDdl(true);
 		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
 		adapter.setPrepareConnection(true);
 		return adapter;

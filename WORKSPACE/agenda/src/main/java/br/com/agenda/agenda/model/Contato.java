@@ -1,9 +1,21 @@
 package br.com.agenda.agenda.model;
 
-public class Contato {
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity 
+public class Contato implements Serializable{
 	
 	
+	private static final long serialVersionUID= 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String nome;
 	private String endereco;
@@ -43,7 +55,4 @@ public class Contato {
 	
 	
 	
-	
-	
-
 }
