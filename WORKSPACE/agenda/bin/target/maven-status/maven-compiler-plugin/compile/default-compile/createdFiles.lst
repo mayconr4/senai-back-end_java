@@ -1,0 +1,4 @@
+br\com\agenda\agenda\controller\IndexController.class
+br\com\agenda\agenda\controller\FornecedorController.class
+br\com\agenda\agenda\AgendaApplication.class
+br\com\agenda\agenda\controller\ContatoController.class

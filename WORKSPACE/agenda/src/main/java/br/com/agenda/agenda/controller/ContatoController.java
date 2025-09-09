@@ -21,7 +21,7 @@ public class ContatoController {
 	        return "contato"; 
 	    }
 	 
-	 @PostMapping("/contato")
+	 @PostMapping(value="/contato")
 	 public String processarFormulario(@ModelAttribute Contato contato, Model model) {
 		 repository.save(contato);
 		 
