@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.com.suporteSenai.suporte.model.Solicitacao;
 import br.com.suporteSenai.suporte.repository.SolicitacaoRepository;
@@ -23,5 +25,13 @@ public class SolicitacaoController {
 		public String solicitacao(Solicitacao solicitacao) {
 			sr.save(solicitacao);
 			return "redirect:/solicitacao";
+		}
+		
+		@RequestMapping("/solicitacao")
+		public ModelAndView listasolicitacao() {
+			ModelAndView mv = new ModelAndView("/painelTecnico");
+			Iterable<Solicitacao> solicitacao = sr.findAll();
+			mv.addObject("solicitacao",solicitacao);
+			return mv;
 		}
 }
