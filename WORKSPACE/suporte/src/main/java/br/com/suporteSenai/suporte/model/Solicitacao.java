@@ -21,7 +21,7 @@ public class Solicitacao implements Serializable {
 	private String codigoPatrimonio;
 	private String descricaoProblema;
 	private String tipoProblema;
-	
+	private String status = "pendente";
 	public long getId() {
 		return id;
 	}
@@ -64,7 +64,16 @@ public class Solicitacao implements Serializable {
 	public void setTipoProblema(String tipoProblema) {
 		this.tipoProblema = tipoProblema;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
-	
+		
 
 }
