@@ -6,8 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.com.suporteSenai.suporte.model.Solicitacao;
 
 @Repository
-public interface SolicitacaoRepository extends CrudRepository<Solicitacao,Long>{
-	
-	
-	// deixar para instalar depois esta edependencia
+public interface SolicitacaoRepository extends CrudRepository<Solicitacao, Long>{
+
 }

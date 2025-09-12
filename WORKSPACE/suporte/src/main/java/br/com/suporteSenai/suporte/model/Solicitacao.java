@@ -2,6 +2,8 @@ package br.com.suporteSenai.suporte.model;
 
 import java.io.Serializable;
 
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,10 +12,12 @@ import jakarta.persistence.Id;
 @Entity
 public class Solicitacao implements Serializable {
 	
-	private static final long serialVersionUID= 1L;
 	
+	
+	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO) // AUTO = AUTO INCREMENT 
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private long id;
 	private String nif;
 	private String nomeSolicitante;
@@ -22,6 +26,15 @@ public class Solicitacao implements Serializable {
 	private String descricaoProblema;
 	private String tipoProblema;
 	private String status = "pendente";
+	
+	
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public long getId() {
 		return id;
 	}
@@ -64,16 +77,7 @@ public class Solicitacao implements Serializable {
 	public void setTipoProblema(String tipoProblema) {
 		this.tipoProblema = tipoProblema;
 	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	
-		
-
+	
+	
 }
