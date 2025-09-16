@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th"http://thymeleaf.org"
+           xmlns:th"http://www.ultraq.net.nz/thymeleaf/layout"
+>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,13 +12,13 @@
 <body>
     
   <header class="cabecalho">
-
+<header class="cabecalho">
     <div class="container-cabecalho justify-content-start">
       <img src="imagens/Logo-novo-SENAI_-sem-slogan_755X325.png" alt="Logotipo SENAI" class="logo-senai-novo">
       <h1 class="titulo-escola">Escola Frederico Jacob</h1>
     </div>
     <hr class="linha-vermelha">
-  </header>
+  </header></header>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -48,14 +50,14 @@
               <label class="form-label required">Tipo de Problema</label>
               <select class="form-select" name="tipoProblema" required>
                 <option value=\"\">Selecione...</option>
-                <option value=\"Hardware\">Hardware</option>
-                <option value=\"Software\">Software</option>
-                <option value=\"Outros\">Outros</option>
+                <option value="Informática">Informática</option>
+                <option value="Eletrica">Eletrica</option>
+                <option value="Zeladoria">Zeladoria</option>
               </select>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <a th:href="@{/}" class="btn btn-primary btn-lg">Voltar</a>
-              <button type="submit" class="btn btn-danger">Abrir Chamado</button>            
+              <a th:href="@{/}" class="btn btn-secondary me-md-2">Voltar</a>
+              <button type="submit" class="btn btn-danger">Abrir Chamado</button>
             </div>
           </form>
         </div>
